@@ -3,7 +3,7 @@ def func(arr, n):
     for i in range(n):
         temp = arr[i]
     
-        for j in range(i+1, n):
+        for j in range(i, n):
             flag = True
             if temp < arr[j]:
                 flag = False
