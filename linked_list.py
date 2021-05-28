@@ -7,3 +7,7 @@ class Node:
 
     def __repr__(self, data):
         return "<Node Data: %s>" % self.data
+
+
+class linked_list:
+    pass
