@@ -10,4 +10,4 @@ class Node:
 
 
 class linked_list:
-    pass
+    
