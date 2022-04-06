@@ -32,3 +32,19 @@ class Solution:
             if val in num_dict:
                 return(num_dict[val]+1, i+1)
             num_dict[v] = i
+
+# Two Sum 2 with Pointers
+
+
+class Solution:
+    def twoSum(self, numbers: list[int], target: int) -> list[int]:
+        left, right = 0, len(numbers)-1
+
+        while left < right:
+            sum = numbers[left] + numbers[right]
+            if sum == target:
+                return[left+1, right+1]
+            elif sum > target:
+                right -= 1
+            else:
+                left += 1
