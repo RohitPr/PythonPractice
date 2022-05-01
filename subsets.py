@@ -19,9 +19,11 @@ class Solution:
                 res.append(subset.copy())
                 return
 
+# Include the element
             subset.append(nums[i])
             dfs(i + 1)
 
+# Exclude the element
             subset.pop()
             dfs(i + 1)
 
