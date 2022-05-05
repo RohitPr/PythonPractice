@@ -33,7 +33,6 @@ class Solution:
 class Solution:
     def sortArrayByParity(self, nums: list[int]) -> list[int]:
         res = deque()
-        l, r = 0, len(nums)-1
 
         for a in nums:
             if a % 2 == 0:
