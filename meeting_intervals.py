@@ -26,7 +26,7 @@ class Solution:
     @return: if a person could attend all meetings
     """
 
-    def can_attend_meetings(self, intervals: list[Interval]) -> bool:
+    def can_attend_meetings(self, intervals) -> bool:
         # Write your code here
         intervals.sort(key=lambda i: i.start)
 

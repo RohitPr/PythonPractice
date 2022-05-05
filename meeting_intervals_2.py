@@ -17,7 +17,7 @@ class Solution:
     @return: the minimum number of conference rooms required
     """
 
-    def min_meeting_rooms(self, intervals: list[Interval]) -> int:
+    def min_meeting_rooms(self, intervals) -> int:
         start = sorted([i.start for i in intervals])
         end = sorted([i.end for i in intervals])
 
