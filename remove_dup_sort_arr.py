@@ -14,7 +14,7 @@
 # It does not matter what you leave beyond the returned k (hence they are underscores).
 
 class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+    def removeDuplicates(self, nums) -> int:
         l = 0
 
         for i in range(1, len(nums)):
