@@ -18,15 +18,9 @@ class Solution:
         res = ""
 
         for a in s:
-            if stack and stack[-1][0] == a:
-                stack[-1][1] += 1
-            else:
-                stack.append([a, 1])
-
-            if stack[-1][1] == 2:
+            if stack and stack[-1] == a:
                 stack.pop()
+            else:
+                stack.append(a)
 
-        for char, val in stack:
-            res += char * val
-
-        return res
+        return "".join(stack)
