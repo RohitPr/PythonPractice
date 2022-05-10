@@ -17,7 +17,7 @@
 # ]
 
 class Solution:
-    def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
+    def combinationSum2(self, candidates: list[int], target: int) -> list[list[int]]:
         res = []
 
         candidates.sort()
@@ -25,7 +25,7 @@ class Solution:
         def dfs(pos, cur, target):
             if target == 0:
                 res.append(cur.copy())
-            if target <= 0:
+            if target < 0:
                 return
 
             prev = -1
