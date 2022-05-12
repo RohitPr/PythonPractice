@@ -26,3 +26,29 @@ class Solution:
 
         dfs(n, n, "")
         return res
+
+# 2
+
+
+class Solution:
+    def generateParenthesis(self, n: int) -> list[str]:
+        res = []
+        cur = []
+
+        def dfs(open, closed):
+            if open == closed == n:
+                res.append("".join(cur))
+                return
+
+            if open < n:
+                cur.append("(")
+                dfs(open + 1, closed)
+                cur.pop()
+
+            if closed < open:
+                cur.append(")")
+                dfs(open, closed + 1)
+                cur.pop()
+
+        dfs(0, 0)
+        return res
