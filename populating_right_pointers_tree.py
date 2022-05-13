@@ -16,6 +16,7 @@
 # Output: [1,#,2,3,#,4,5,7,#]
 # Explanation: Given the above binary tree (Figure A), your function should populate each next pointer to point to its next right node, just like in Figure B. The serialized output is in level order as connected by the next pointers, with '#' signifying the end of each level.
 
+# https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/
 
 """
 # Definition for a Node.
@@ -29,7 +30,7 @@ class Node:
 
 
 class Solution:
-    def connect(self, root: 'Node') -> 'Node':
+    def connect(self, root):
         if not root:
             return root
 
