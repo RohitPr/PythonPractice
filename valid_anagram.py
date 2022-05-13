@@ -10,6 +10,9 @@
 
 # Solution 1
 
+from collections import Counter
+
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t):
@@ -61,3 +64,20 @@ class Solution:
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         return Counter(s) == Counter(t)
+
+# Solution 5
+
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+
+        s1Count = [0] * 26
+        s2Count = [0] * 26
+
+        for a in range(len(s)):
+            s1Count[ord(s[a])-ord('a')] += 1
+            s2Count[ord(t[a])-ord('a')] += 1
+
+        return s1Count == s2Count
