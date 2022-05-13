@@ -1,2 +1,2 @@
 # PythonPractice
-Practice Python Scripts for competitive programming mostly for LeetCode, CodeWars, CodeForces, HackerRank
+Python Scripts of DSA problems from LeetCode, CodeWars, CodeForces, HackerRank etc.
