@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/car-fleet/  
+# https://leetcode.com/problems/car-fleet/ 
 
 class Solution:
     def carFleet(self, target: int, position: list[int], speed: list[int]) -> int:
