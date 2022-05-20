@@ -11,7 +11,6 @@
 
 class Solution:
     def find132pattern(self, nums: list[int]) -> bool:
-
         stack, s3 = [], -float("inf")
         for n in nums[::-1]:
             if n < s3:
