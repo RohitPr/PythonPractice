@@ -3,9 +3,11 @@ class Solution:
         res = max(nums)
         curMin, curMax = 1, 1
         
-        for n in nums:    
-            tmp = curMax * n
-            curMax = max(n * curMax, n * curMin, n) 
-            curMin = min(tmp, n * curMin, n)
+        for a in nums:
+            
+            tmp = curMax * a
+            curMax = max(a * curMin, a * curMax, a)
+            curMin = min(a * curMin, tmp,  a)
             res = max(res, curMax)
+        
         return res
