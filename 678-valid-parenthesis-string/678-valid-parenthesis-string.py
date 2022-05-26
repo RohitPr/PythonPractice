@@ -1,18 +1,20 @@
 class Solution:
     def checkValidString(self, s: str) -> bool:
-         leftMin, leftMax = 0, 0
+        left, right = 0, 0
         
-         for c in s:
-            if c == "(":
-                leftMin, leftMax = leftMin + 1, leftMax + 1
-            elif c == ")":
-                leftMin, leftMax = leftMin - 1, leftMax - 1
+        for a in s:
+            if a == '(':
+                left, right = left + 1, right + 1
+            elif a == ')':
+                left, right = left - 1, right - 1
             else:
-                leftMin, leftMax = leftMin - 1, leftMax + 1
-            if leftMax < 0:
+                left, right = left - 1, right + 1
+            
+            if right < 0:
                 return False
-            if leftMin < 0: 
-                leftMin = 0
-                
-         return leftMin == 0
+            
+            if left < 0:
+                left = 0
+            
+        return left == 0
                 
