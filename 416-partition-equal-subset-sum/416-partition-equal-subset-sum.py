@@ -12,6 +12,8 @@ class Solution:
             cache = set()
             
             for t in dp:
+                if t + nums[a] == target:
+                    return True
                 cache.add(t)
                 cache.add(t + nums[a])
                 
