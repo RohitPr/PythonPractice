@@ -4,9 +4,6 @@ class Solution:
         res = 0
         
         def check(s1, s2):
-            s1 = set(s1)
-            s2 = set(s2)
-            
             for a in s1:
                 if a in s2:
                     return False
