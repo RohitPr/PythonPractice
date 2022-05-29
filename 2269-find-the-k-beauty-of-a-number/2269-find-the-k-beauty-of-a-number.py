@@ -3,10 +3,11 @@ class Solution:
         l, r = 0, k
         res = 0
         strnum = str(num)
+        
         while r <= len(strnum):
             n = int(strnum[l:r])
             
-            if not n:
+            if n == 0:
                 l += 1
                 r += 1
                 continue
