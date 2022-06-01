@@ -19,9 +19,6 @@ class Solution:
         if not root and not subRoot:
             return True
         
-        if not root or not subRoot:
-            return False
-        
         if root and subRoot and root.val == subRoot.val:
             return (self.sameTree(root.left, subRoot.left) and 
                     self.sameTree(root.right, subRoot.right)) 
