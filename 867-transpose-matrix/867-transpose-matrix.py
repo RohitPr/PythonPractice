@@ -11,3 +11,5 @@ class Solution:
             res.append(temp)
                 
         return res
+    
+#     return list(zip(*matrix))
