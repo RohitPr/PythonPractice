@@ -1,22 +1,30 @@
 class Solution:
     def longestSubstring(self, s: str, k: int) -> int:
-        if len(s) == 0 or k > len(s):
-            return 0
+#         if len(s) == 0 or k > len(s):
+#             return 0
         
-        sCount = {}
+#         sCount = {}
         
-        for a in s:
-            sCount[a] = 1 + sCount.get(a, 0)    
+#         for a in s:
+#             sCount[a] = 1 + sCount.get(a, 0)    
         
-        sub1, sub2 = "", ""
+#         sub1, sub2 = "", ""
         
-        for i, v in enumerate(s):
-            if sCount[v] < k:
-                sub1 = self.longestSubstring(s[i+1:], k)
-                sub2 = self.longestSubstring(s[:i], k)
-                break
-        else:
-            return(len(s))
+#         for i, v in enumerate(s):
+#             if sCount[v] < k:
+#                 sub1 = self.longestSubstring(s[i+1:], k)
+#                 sub2 = self.longestSubstring(s[:i], k)
+#                 break
+#         else:
+#             return(len(s))
         
-        return max(sub1, sub2)
+#         return max(sub1, sub2)
         
+        if s == [] or k > len(s):
+                return 0
+        freq = collections.Counter(s)
+
+        for i, char in enumerate(s):
+            if freq[char] < k:
+                return max(self.longestSubstring(s[:i], k),  self.longestSubstring(s[i+1:], k))
+        return len(s)
