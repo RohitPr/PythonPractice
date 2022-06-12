@@ -19,3 +19,8 @@ class Solution:
                 s3 = stack.pop()
             stack.append(n)
         return False
+
+
+s = Solution()
+
+print(s.find132pattern([1, 2, 3, 5, 7, 8, 9]))
