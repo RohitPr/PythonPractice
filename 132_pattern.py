@@ -21,6 +21,6 @@ class Solution:
         return False
 
 
-s = Solution()
+# s = Solution()
 
-print(s.find132pattern([1, 2, 3, 5, 7, 8, 9]))
+# print(s.find132pattern([1, 2, 3, 5, 7, 8, 9]))
