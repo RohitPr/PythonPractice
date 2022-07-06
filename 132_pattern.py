@@ -10,7 +10,7 @@
 
 
 class Solution:
-    def find132pattern(self, nums: list[int]) -> bool:
+    def find132pattern(self, nums) -> bool:
         stack, s3 = [], -float("inf")
         for n in nums[::-1]:
             if n < s3:
