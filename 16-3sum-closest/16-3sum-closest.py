@@ -4,8 +4,11 @@ class Solution:
             return None
         
         diff=float('inf')
+        
         l, r = 0, len(nums)-1
+        
         res = sum(nums[:3])
+        
         nums.sort()
 
         for n in range(len(nums)-2):
@@ -24,6 +27,6 @@ class Solution:
                 elif numSum > target:
                     n2 -= 1
                 else:
-                    return target
+                    return numSum
         
         return res
