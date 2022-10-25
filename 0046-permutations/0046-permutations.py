@@ -4,7 +4,7 @@ class Solution:
 
         def dfs(nums, cur):
             if not nums:
-                res.append(cur.copy())
+                res.append(cur[:])
 
             for a in range(len(nums)):
                 dfs(nums[a+1:] + nums[:a], cur + [nums[a]])
