@@ -6,7 +6,7 @@ class Solution:
         for i,n in enumerate(nums):
             total += n
             r = total % k
-            
+    
             if r not in remainder:
                 remainder[r] = i
             elif i - remainder[r] > 1:
