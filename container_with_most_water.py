@@ -16,7 +16,7 @@
 
 
 class Solution:
-    def maxArea(self, height: list[int]) -> int:
+    def maxArea(self, height: List[int]) -> int:
         l, r = 0, len(height) - 1
         maxWater = 0
 
